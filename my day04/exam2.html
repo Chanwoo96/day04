@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#b1').click(function () {
+                cost=parseInt($('#co').val())
+                method=$("#me").val()
+                if(method==1){
+                    cost=cost*0.8
+                }else if(method==2){cost=cost*0.9}else{cost=cost}
+                $('#d1').html(cost+'원이 결제되었습니다.')
+            })
+            $('#b2').click(function () {
+                user= $('#mem').val()
+                
+                if(user=='apple'){
+                    $('#d1').html(user+'는 중복된 id입니다.')
+                    
+                }else if(user=='root'){
+                    $('#d1').html(user+'는 중복된 id입니다.')
+                    
+                }else{
+                    $('#d1').html(user+'사용가능한 id입니다.')
+                    
+                }
+            
+            })
+            $('#b3').click(function () {
+                phone=parseInt( $('#phone').val())
+                if (phone > 01) {
+                    
+                }
+
+
+                $('#d1').append("<img src=img/red.png width= 100 height=50>")
+                $('#d1').append(wr2+'<br>')
+            })
+
+        })
+    </script>
+</head>
+<body>
+    결제금액:<input type="text"id="co"><br>
+    1)계좌이체,2)신용카드,3)휴대폰결제<br>
+    결제수단:<input type="text"id="me">
+    <button id="b1">결제하기</button><br>
+    <hr>
+    회원가입할 id입력:<input type="text" id="mem"><button id="b2">id 중복 체크</button><br>
+    <hr>
+    휴대폰 번호를 입력해주세요: <input type="text" id="phone"> <button id="b3">인증번호</button><br>
+    <hr>
+    <div id="d1"></div>
+</body>
+</html>

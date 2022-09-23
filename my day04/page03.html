@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+           $('#test').click(function () {
+            user=$('#id').val()
+
+            if (user.length>4){
+                $('#result').append('글자수가 충분합니다.<br>')
+            }else{
+
+                $('#result').append('글자수가 부족합니다.<br>')
+            }
+           })
+            $('#b1').click(function() {
+            // 입력
+            pw = $('#pw').val()
+            pw1 = $('#pw1').val()
+            // 처리
+            if (pw == pw1) {
+                // $('#result').html('<span style="color:red">패스워드가 일치합니다</span>')
+                $('#result').append('<span style="color:red">패스워드가 일치합니다</span><br>')
+            }else{
+                $('#result').append('패스워드가 다릅니다<br>')
+
+            }
+            // 출력
+          
+           }
+
+           )
+        }  
+        )
+    </script>
+</head>
+<body>
+    아이디: <input id="id">
+    <button id="test">글자수 확인</button><br>
+패스워드: <input id="pw"><br>
+패스워드1: <input id="pw1"><br>
+<button id="b1">비밀번호 확인</button>
+<div id="result"></div>
+</body>
+</html>
